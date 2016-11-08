@@ -1,0 +1,8 @@
+官网jquery压缩版引用地址:
+http://code.jquery.com/jquery-2.0.0.min.js
+
+百度版本：
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+
+引用最新的jQuery：
+<script src="http://code.jquery.com/jquery-latest.js"></script>

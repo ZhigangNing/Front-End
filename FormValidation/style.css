@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+#demoForm{
+  width: 300px;
+  margin: 50px auto;
+}
+
+p{
+  text-align: center;
+  font-size: 15px;
+}
+
+input{
+  font-size: 15px;
+}
+
+#username-error,#password-error{
+  display: block;
+  margin-top: 12px;
+}

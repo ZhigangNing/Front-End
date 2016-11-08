@@ -1,0 +1,40 @@
+
+#tabs{
+	width: 290px;
+	height: 150px;
+}
+
+#tabs ul{
+	height: 30px;
+	border-bottom: 2px saddlebrown solid;
+	line-height: 30px;
+	margin: auto;
+}
+
+ul li{
+margin: 0px 3px;
+list-style: outside none none;
+border: 1px solid #aaa;
+display: inline-block;
+background: #fff;
+float: left;
+line-height: 28px;
+border-bottom: none;
+width: 60px;
+text-align: center;
+}
+.on{
+	border-top: 2px saddlebrown solid;
+	border-bottom: 2px  solid #fff;
+}
+#tabs div{
+    height: 120px;
+	line-height: 25px;
+	border: 1px solid #336699;
+	border-top: none;
+	padding: 5px;
+}
+
+.hidden{
+display:none;
+}  

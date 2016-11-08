@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 16px/1.8 "Microsoft Yahei",verdana;
+}
+.section{
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+/*第一屏样式设置*/
+.section1{
+    background: url("img/hero_sunset_large_2x.jpg") no-repeat center;
+    background-size: cover;
+    background-color: #3677CD;
+}
+.section1 h1{
+    margin-top: 2%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: normal;
+    opacity: .8;
+}
+.section1 p{
+    margin: 800px auto 0;
+    color: #fff;
+    font-size: 18px;
+    width: 60%;
+    opacity: .6;
+}
+
+.main_logo{
+    background: url("img/main_logo.png") no-repeat center;
+    height: 500px;
+}
+
+.section1 a{
+    display: block;
+    color: #ff9000;
+    font-size: 18px;
+    opacity: .9;
+}
+/*第二屏样式设置*/
+.section2{
+    background-color: #25B0DD;
+}
+.section2 h1{
+    margin: 20px auto;
+    color: #fff;
+    font-size: 50px;
+    font-weight: normal;
+}
+.section2 a{
+    display: block;
+    margin: 20px auto 0;
+    color: #08c;
+    font-size: 18px;
+}
+
+.sec2_div{
+  width: 1050px;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.book_main_img{
+      float: left;
+}
+
+.book_sub_img img{
+  margin: 30px;
+}
+
+.book_main_img{
+  margin-left: 10px;
+}
+
+.book_img{
+      float: right;
+      margin-right: 10px;
+}
+
+
+/*第三屏样式设置*/
+.section3{
+    background: url("img/sub_logo.png") no-repeat center 260px;
+    background-size: 40%;
+    background-color: #15CF90;
+}
+.section3 h1{
+    margin: 20px auto 20px -1500px;
+    color: #333;
+    font-size: 40px;
+    font-weight: normal;
+    width: 60%;
+    /*margin-left: -1500px;*/
+}
+.section3 p{
+    margin: 20px auto 0 1500px;
+    color: #333;
+    font-size: 18px;
+    width: 60%;
+    /*margin-left: 1500px;*/
+}
+.section3 a{
+    display: block;
+    margin: 20px auto 0;
+    color: #08c;
+    font-size: 18px;
+}
+/*第四屏样式设置*/
+
+.section4{
+  background-color: #D8EF7B;
+}
+
+.section4 h1{
+    margin: 20px auto;
+    color: #333;
+    font-size: 40px;
+    font-weight: normal;
+}
+.section4 .row{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: #333;
+    font-size: 16px;
+}
+.section4 .column{
+    margin: 150px 5px;
+    padding-bottom: 20px;
+}
+.section4 .column img{
+    height: 130px;
+    margin-top: 30px;
+}
+.section4 .column h4{
+    margin: 20px auto;
+}
+.section4 .column h4.primary{
+    background-image: url("img/logo_collection_primary.png");
+    background-size: 78px 78px;
+    width: 80px;
+    height: 80px;
+}
+.section4 .column h4.sport{
+    background-image: url("img/logo_collection_sport.png");
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+}
+.section4 .column h4.edition{
+    background-image: url("img/logo_collection_edition.png");
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+}
+.section4 .column p{
+    width: 90%;
+    margin: 10px auto;
+}
+.section4 .column a{
+    display: block;
+    margin: 10px auto 0;
+    color: #08c;
+}
+
+.slide p{
+    margin: 300px auto 50px;
+    font-size: 50px;
+}
+
+.slide1{
+    background: url("img/qinghai.jpg") no-repeat center;
+}
+
+.slide2{
+    background: url("img/xining.jpg") no-repeat center;
+}
+
+.slide3{
+    background: url("img/luoyang.jpg") no-repeat center;
+}
+
+.slide4{
+    background: url("img/changyan.jpg") no-repeat center;
+}
+
+.slide5{
+    background: url("img/yuejiao.jpg") no-repeat center;
+}

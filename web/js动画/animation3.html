@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>js动画</title>
+		<style type="text/css">
+		*{margin:0px;padding:0px}
+			#div1,#div2{margin-bottom:50px;width: 200px;height:200px;background-color:green;position: relative;left: 0px;}
+		</style>
+		
+		<script language="javascript" type="text/javascript"> 
+		  //左右缓冲运动
+		var time=null;
+		 window.onload = function(){
+		var div1=document.getElementById("div1");  
+        div1.onmouseover=function(){	 
+			clearInterval(time);
+			time=setInterval("startmove(200)",30);
+		}
+		div1.onmouseout=function(){
+			 clearInterval(time);
+			 time=setInterval("startmove(0)",30);	
+		}
+      }
+	  
+	  	  function startmove(target){	
+			var div1=document.getElementById("div1");  
+			var speed=(target-div1.offsetLeft)/30;
+			speed=speed>0?Math.ceil(speed):Math.floor(speed);
+			if(div1.offsetLeft==target){
+				clearInterval(time);
+			}
+			else{
+				div1.style.left=div1.offsetLeft+speed+'px'; 
+			}
+	  }
+
+		 </script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

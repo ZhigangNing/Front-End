@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Magnifier放大镜效果实现</title>
+    <script src="Magnifier.js" charset="utf-8"></script>
+</head>
+<body>
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        .main {
+            margin: 50px;
+        }
+        .xiaotu,
+        .datu {
+            float: left;
+            position: relative;
+        }
+        .xiaotu img {
+            width: 500px;
+        }
+        .yidong {
+            width: 100px;
+            height: 100px;
+            background: #333;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+        }
+        .datu {
+            width: 320px;
+            height: 320px;
+            overflow: hidden;
+            display: none;
+        }
+        .datu img {
+            position: absolute;
+        }
+        .clear {
+            height: 0px;
+            clear: both;
+        }
+    </style>
+    <div class="main">
+        <div id="xiaotu" class="xiaotu">
+            <img src="pic2.jpg" alt="" />
+            <div id="yidong" class="yidong"></div>
+        </div>
+        <div id="datu" class="datu"><img id="img1" src="pic2.jpg" alt="" /></div>
+        <br class="clear" />
+    </div>
+</body>
+
+</html>

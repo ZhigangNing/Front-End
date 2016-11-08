@@ -1,0 +1,74 @@
+
+header {
+	margin:10px;
+
+	background-color: white;
+}
+
+ul{
+	margin-right: 10px;
+	text-align: right;
+}
+
+li {
+   margin: 5px;
+   list-style: none;
+   display: inline;
+   font-size: 90%;
+
+}
+
+.header_li{
+	  color: black;
+	  font-weight: bolder;
+}
+
+#color{
+	width: 60px;
+	height: 23px;
+	background-color: #38f;
+	color: white;
+	font-weight: bold;
+    position: relative
+}
+
+header a:hover{
+	color: red;
+
+}
+
+#align{
+	text-align: center;
+}
+
+#logo{
+	width: 295px;
+	height: 129px;
+}
+
+#input{
+	margin:20px;
+	width: 539px;
+	height: 34px;
+}
+
+#button{
+	margin-left: -32px;
+	background-color: #3385ff;
+	color: white;
+	height: 34px;
+	width: 100px;
+}
+
+footer{
+    width:100%;
+	position:fixed;
+	bottom:50px;
+	text-align: center;
+	margin:5px;
+	font-size: small;
+}
+
+footer a{
+	margin:10px;
+}

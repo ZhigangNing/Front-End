@@ -1,0 +1,60 @@
+﻿<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>倒计时</title>
+		
+		<script language="javascript" type="text/javascript">
+
+      window.onload = function(){
+        showTime();
+      }
+      //获取当前时间
+      function checkTime(i){  //补位处理
+          if(i<10) { i= "0"+ i; }
+          return i;
+        }
+      function showTime(){
+        var now=new Date();
+        var year=now.getFullYear();
+        var month=now.getMonth()+1;
+        var day=now.getDate();
+        var d=now.getDay();
+        var h=now.getHours();
+        var m=now.getMinutes();
+        var s=now.getSeconds();
+        h=checkTime(h);
+        m=checkTime(m);
+        s=checkTime(s); 
+    
+        var weekday=new Array(7)
+        weekday[0]="星期日"
+        weekday[1]="星期一"
+        weekday[2]="星期二"
+        weekday[3]="星期三"
+        weekday[4]="星期四"
+        weekday[5]="星期五"
+        weekday[6]="星期六"
+    
+        document.getElementById("show").innerHTML="今天是："+year+"年"+month+"月"+day+"日 "+ weekday[d] +h+":"+m+":"+s; 
+      //倒计时
+            var endtime=new Date("2017/1/1,00:00:00");//结束时间
+            var left_time= (endtime.getTime()-now.getTime())/1000;
+            var left_day= parseInt(left_time/(24*60*60));
+                              //alert(left_day);
+            var left_h=parseInt((left_time/(60*60))%24);
+            var left_m=parseInt((left_time/60)%60);
+            var left_s=parseInt(left_time%60);
+            document.getElementById("time").innerHTML="距离元旦还有："+left_day+"天"+left_h+"小时"+left_m+"分"+left_s+"秒";
+            if(left_time<=0){
+            document.getElementById("time").innerHTML="已结束";
+            clearInterval(t);
+            }
+          var t=setTimeout('showTime()',500);
+       }
+  </script>
+	</head>
+	<body>
+		<div id="show"></div>
+    <div id="time"></div>
+	</body>
+</html>

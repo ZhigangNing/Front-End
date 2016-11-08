@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>js动画</title>
+		<style type="text/css">
+		*{margin:0px;padding:0px}
+			.div1{margin:20px;width: 200px;height:200px;background-color:red;float:left;opacity: 0.3;filter:alpha(opacity:30);}
+		</style>
+		
+		<script language="javascript" type="text/javascript"> 
+		   //多物体透明度变化
+		 window.onload = function(){
+			var div1=document.getElementsByClassName("div1");  
+			for(var i=0;i<div1.length;i++){
+				div1[i].alpha=30;
+				div1[i].onmouseover=function(){	 
+					startmove(this,100);	
+				}
+				div1[i].onmouseout=function(){
+					startmove(this,30);	
+				}
+			}
+		 }
+		 
+	  	  function startmove(obj,target){	
+				clearInterval(obj.time);  
+				obj.time=setInterval(function(){
+					var speed=0;
+					if(obj.alpha<target){
+						speed=10;
+					}
+					else{
+						speed=-10;
+					}
+					if(obj.alpha==target){
+						clearInterval(obj.time);
+					}
+					else{
+						obj.alpha+=speed;
+						obj.style.filter='alpha(opacity:'+obj.alpha+')';
+						obj.style.opacity=obj.alpha/100; 
+					}
+				},30); 	
+	  }
+
+		 </script>
+	</head>
+	<body>
+		<div class="div1"></div>
+		<div class="div1"></div>
+		<div class="div1"></div>
+		<div class="div1"></div>
+		<div class="div1"></div>
+	</body>
+</html>

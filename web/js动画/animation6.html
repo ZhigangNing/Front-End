@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>js动画</title>
+		<style type="text/css">
+		*{margin:0px;padding:0px}
+		ul li{margin-bottom:20px;width: 200px;height:100px;background-color:yellow;border: 2px solid green;}
+		</style>
+		
+		<script language="javascript" type="text/javascript"> 
+	
+         //多物体运动
+		 window.onload = function(){
+			var li=document.getElementsByTagName("li"); 
+			for(var i=0;i<li.length;i++){
+				li[i].onmouseover=function(){	 
+					startmove(this,500);	
+				}
+				li[i].onmouseout=function(){
+					startmove(this,200);	
+				}
+			}
+        }
+		
+		function getStyle(obj,attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			}
+			else{
+				return getComputedStyle(obj,false)[attr];
+			}
+		}
+	  	 function startmove(obj,target){	
+			clearInterval(obj.time);   
+			obj.time=setInterval(function(){
+				var cur=parseInt(getStyle(obj,'width'));
+				var speed=(target-cur)/5;
+				speed=speed>0?Math.ceil(speed):Math.floor(speed);
+				if(cur==target){
+					clearInterval(obj.time);
+				}
+				else{
+					obj.style['width']=cur+speed+'px'; 
+				}	
+			},30);	
+	    }
+
+		 </script>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>

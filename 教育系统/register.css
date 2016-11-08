@@ -1,0 +1,44 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#register{
+  width: 460px;
+  height: 400px;
+  margin: 200px auto;
+  padding: 15px 5px;
+  background-color: #D4D9EB;
+  text-align: center;
+}
+
+#register p{
+  margin: 20px auto;
+  font-size: 25px;
+  padding: 20px 48px;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+#register input {
+  width: 256px;
+  height: 35px;
+  margin: 20px auto;
+  font-size: 15px;
+}
+
+#register a{
+  display: block;
+  margin: 15px auto;
+  width: 324px;
+  background-color: #005CA3;
+  line-height: 40px;
+  color: #fff;
+  font-size: 20px;
+}
+
+#register a:hover{
+  background-color: #0C88E8;
+}

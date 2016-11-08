@@ -1,0 +1,27 @@
+*{margin: 0;
+  padding: 0}
+
+  /*不用css3时的样式；
+  #main{position: relative;}
+  .box{padding: 15px 0 0 15px;float: left;}*/
+
+#main{-webkit-column-width:207px;
+	-moz-column-width:207px;
+	-o-column-width:207px;
+	-ms-column-width:207px;
+	-webkit-column-rule:2px dashed #F00;
+	-moz-column-rule:2px dashed #F00;
+	-o-column-rule:2px dashed #F00;
+	-ms-column-rule:2px dashed #F00;
+	-webkit-column-gap:10px;
+	-moz-column-gap:10px;
+	-o-column-gap:10px;
+	-ms-column-gap:10px;}
+
+.box{padding: 15px 0 0 15px;}
+
+.pic{padding: 10px;
+	border: 1px solid #ccc;
+	border-radius:5px;
+	box-shadow: 0 0 5px #ccc;}
+.pic img{width: 170px;height: auto;display: block;}

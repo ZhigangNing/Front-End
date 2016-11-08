@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>圆形放大镜</title>
+<style type="text/css">
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wrap {
+  text-align: center;
+}
+.wrap img {
+  width: 60%;
+  cursor: crosshair;
+}
+.loupe {
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 999;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #636363;
+  border-radius: 50%;
+}
+</style>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var vh=$(window).height();
+  var vw=$(window).width();
+  var imgh=$(".wrap img").height();
+  var imgw=$(".wrap img").width();
+  var beginX=(vw-imgw)/2;
+  var endX=beginX+imgw;
+  var beginY=(vh-imgh)/2;
+  var endY=beginY+imgh;
+  $(".wrap").css("margin-top",beginY+"px");
+  //鼠标经过
+  document.addEventListener("mousemove", loupe , false);
+  function loupe(e){
+    var x,y;
+    x=e.clientX;
+    y=e.clientY;
+    //判断鼠标或触摸点在图片区域，是则显示放大镜div层
+    if(x>beginX&&x<endX&&y>beginY&&y<endY){
+      var mx=100-(x-beginX)/imgw*1920 ;//1920为原图片宽度
+      var my=100-(y-beginY)/imgh*1200 ;//1200为原图片高度
+      var bg="url(pic.jpg) "+mx+"px "+my+"px no-repeat #fff";
+      $(".loupe").css("left",x-103+"px").css("top",y-103+"px").css('background',bg);
+      $(".loupe").css("visibility","visible");
+    }else{
+      $(".loupe").css("visibility","hidden");
+    }
+  }
+})
+</script>
+</head>
+<body>
+  <div class="loupe"></div>
+  <div class="wrap">
+    <img src="pic.jpg">
+  </div>
+</body>
+</html>

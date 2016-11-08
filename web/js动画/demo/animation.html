@@ -1,0 +1,50 @@
+﻿<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>js动画</title>
+		<style type="text/css">
+		*{margin:0px;padding:0px}
+		div{
+			width:300px;
+			margin: 100px auto;
+		}
+		ul li{margin: 0 7px; 
+			  list-style: none;
+			  display: inline-block;
+			  width: 54px;
+			  vertical-align: top;
+			  text-align: center;
+			  border: 1px solid gray;
+			 }
+	    ul li a{display: block; font: 12px/23px Arial,Helvetica,sans-serif;opacity: 1;filter:alpha(opacity:100); }
+		.jump{display: block; position: relative;top: 0px;}
+		</style>
+		<script src="move.js"></script>
+		<script language="javascript" type="text/javascript"> 
+	
+         //多物体运动
+		 window.onload = function(){
+			var jump=document.getElementsByTagName("i");
+			for(var i=0;i<jump.length;i++){
+				jump[i].onmouseover=function(){	 
+				var _this=this;
+				startmove(_this,{'opacity':0,'top':-30},function(){
+			    _this.style.top=30+"px";					
+				startmove(_this,{'opacity':100,'top':0});	
+				});	
+			    }
+			}
+		 }
+		 </script>
+	</head>
+	<body>
+		<div>
+		<ul>
+			<li><a href="#" title="中华部队"><i class="jump"><img src="img/fans1.jpg"></i>中华部队</a></li>
+			<li><a href="#" title="吴昊"><i class="jump"><img src="img/fans2.jpg"></i>吴昊</a></li>
+			<li><a href="#" title="苦无"><i class="jump"><img src="img/fans3.jpg"></i>苦无</a></li>
+			<li><a href="#" title="part"><i class="jump"><img src="img/fans4.jpg"></i>part</a></li>
+		</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>js动画</title>
+		<style type="text/css">
+		*{margin:0px;padding:0px}
+		ul li{margin-bottom:20px;width: 200px;height:100px;background-color:yellow;border: 2px solid green;}
+		#li3{opacity: 0.3;filter:alpha(opacity:30);}
+		</style>
+		
+		<script language="javascript" type="text/javascript"> 
+	
+         //多物体运动
+		 window.onload = function(){
+			var li1=document.getElementById("li1");
+			var li2=document.getElementById("li2");
+			var li3=document.getElementById("li3");
+			li1.onmouseover=function(){	 
+				startmove(this,'height',300);	
+			}
+			li1.onmouseout=function(){
+				startmove(this,'height',100);	
+			}
+            li2.onmouseover=function(){	 
+				startmove(this,'width',500);	
+			}
+		    li2.onmouseout=function(){
+				startmove(this,'width',200);	
+			}
+			li3.onmouseover=function(){	 
+				startmove(li3,'opacity',100,function(){
+					startmove(li3,'width',300,function(){
+						startmove(li3,'height',300)
+					})
+				});	
+			}
+		    li3.onmouseout=function(){
+				startmove(li3,'height',100,function(){
+					startmove(li3,'width',200,function(){
+						startmove(li3,'opacity',30)
+					})
+				});	
+			}
+        }
+		
+		function getStyle(obj,attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			}
+			else{
+				return getComputedStyle(obj,false)[attr];
+			}
+		}
+	  	 function startmove(obj,attr,target,fn){	
+			clearInterval(obj.time);
+			obj.time=setInterval(function(){
+				var cur=0;
+				if(attr=='opacity'){
+					cur=Math.round(parseFloat(getStyle(obj,attr))*100);
+				}
+				else{
+					cur=parseInt(getStyle(obj,attr));
+				}
+				
+				var speed=(target-cur)/5;
+				speed=speed>0?Math.ceil(speed):Math.floor(speed);
+				if(cur==target){
+					clearInterval(obj.time);
+					if(fn){
+						fn();
+					}
+				}
+				else{
+					if(attr=='opacity'){
+						obj.style.filter='alpha(opacity:'+(cur+speed)+')';
+						obj.style[attr]=(cur+speed)/100; 
+					}
+					else{
+					obj.style[attr]=cur+speed+'px';	
+					}
+				}	
+			},30);	
+	    }
+
+		 </script>
+	</head>
+	<body>
+		<ul>
+			<li id="li1"></li>
+			<li id="li2"></li>
+			<li id="li3"></li>
+		</ul>
+	</body>
+</html>

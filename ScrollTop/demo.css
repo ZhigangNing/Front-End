@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#box{
+  margin: auto;
+  width: 1190px;
+}
+
+#btn{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  left: 95%;
+  bottom: 30px;
+  background: url(bg_btn.png) no-repeat top;
+}
+
+#btn:hover{
+    background: url(bg_btn.png) no-repeat 0px -40px;
+}

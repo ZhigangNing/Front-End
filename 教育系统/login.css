@@ -1,0 +1,140 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#header{
+  position: fixed;
+  width: 100%;
+  background-color: #266CCB;
+  line-height: 44px;
+  top: 0px;
+  z-index: 9;
+}
+
+.dheader{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.menu a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  padding: 0 12px;
+}
+
+.menu ul li{
+  display: inline-block;
+  list-style: none;
+  float: left;
+  width: 97px;
+  text-align: center;
+  position: relative;
+}
+
+.menu span{
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top: 5px solid #fff;
+  vertical-align: middle;
+}
+
+.smenu{
+  display: block;;
+  position: absolute;
+  top: 44px;
+}
+
+.submenu{
+  display: block;;
+  position: absolute;
+  left: 97px;
+  top: 0;
+}
+
+.smenu span{
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid transparent;
+  border-right-width: 0px;
+  vertical-align: middle;
+}
+
+.smenu,.submenu{
+  display: none;
+}
+
+.menu ul li:hover .smenu,.smenu li:hover .submenu{
+  background: #005CA3;
+  display: block;
+}
+
+.menu li :hover{
+  background: black;
+}
+
+#left{
+  width: 80%;
+  float: left;
+}
+
+#right{
+  width: 20%;
+  float: right;
+}
+
+  /*<!-- 导航菜单栏 CSS   end-->*/
+
+
+#subbody{
+  width: 100%;
+  height: 880px;
+  margin-top: 44px;
+  background: url(img/warpper_bg.jpg) no-repeat center center;
+  position: fixed;
+}
+
+#login{
+  width: 360px;
+  height: 300px;
+  background-color: #D3E9F8;
+  margin: 200px auto;
+}
+
+#login p{
+  margin: 20px auto;
+  font-size: 25px;
+  padding: 20px 48px;
+}
+
+#login input {
+  width: 256px;
+  height: 35px;
+  display: block;
+  margin: 20px auto;
+  font-size: 15px;
+}
+
+#login a{
+  display: block;
+  margin: auto;
+  width: 65px;
+}
+
+.login_bt:hover{
+    background-color: #0C88E8;
+}
+
+
+.footer{
+  width: 100%;
+  height: 22px;
+  color: #666;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+}

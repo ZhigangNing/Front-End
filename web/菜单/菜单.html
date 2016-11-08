@@ -1,0 +1,151 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>css菜单演示</title>
+<style type="text/css">
+<!--
+*{margin:0;padding:0;border:0;}
+body {
+font-family: arial, 宋体, serif;
+font-size:12px;
+}
+#nav {
+line-height: 24px; list-style-type: none;
+}
+#nav a {
+display: block; width: 80px; text-align:center;
+}
+#nav a:link {
+color:#666; text-decoration:none;
+}
+#nav a:visited {
+color:#666;text-decoration:none;
+}
+#nav a:hover {
+color:#FFF;text-decoration:none;font-weight:bold;
+}
+#nav li {
+ width: 80px; background:#CCC;
+}
+#nav li a:hover{
+background:#999;
+}
+#nav li ul {
+line-height: 27px; list-style-type: none;text-align:left;
+left: -999em; width: 180px;
+}
+#nav li ul li{
+float: left; width: 180px;
+background: #F6F6F6;
+}
+#nav li ul a{
+display: block; width: 156px;text-align:left;padding-left:24px;
+}
+#nav li ul a:link {
+color:#666; text-decoration:none;
+}
+#nav li ul a:visited {
+color:#666;text-decoration:none;
+}
+#nav li ul a:hover {
+color:#F3F3F3;text-decoration:none;font-weight:normal;
+background:#C00;
+}
+
+.sub_nav{
+  display: none;
+}
+.show_{
+  display: block;
+}
+/*#nav li:hover ul{
+    display: block;
+}*/
+-->
+</style>
+<script type=text/javascript>
+  window.onload=function(){
+
+  var nav_as = document.getElementsByClassName('nav_a');
+    for(var i=0; i < nav_as.length; i++){
+      nav_as[i].onclick = function(){
+
+        if(this.parentNode.children[1].className.match(new RegExp('(\\s|^)show_(\\s|$)'))){
+           this.parentNode.children[1].className = 'sub_nav';
+         }else{
+          this.parentNode.children[1].className += " show_";
+        }
+
+      }
+    }
+
+  }
+</script>
+</head>
+<body>
+<ul id="nav">
+<li>
+    <a href="#" _fcksavedurl="#" class="nav_a">产品介绍</a>
+    <ul class="sub_nav">
+      <li><a href="#" _fcksavedurl="#">产品一</a></li>
+      <li><a href="#" _fcksavedurl="#">产品一</a></li>
+      <li><a href="#" _fcksavedurl="#">产品一</a></li>
+      <li><a href="#" _fcksavedurl="#">产品一</a></li>
+      <li><a href="#" _fcksavedurl="#">产品一</a></li>
+      <li><a href="#" _fcksavedurl="#">产品一</a></li>
+    </ul>
+</li>
+<li><a href="#" _fcksavedurl="#" class="nav_a">服务介绍</a>
+<ul class="sub_nav">
+<li><a href="#" _fcksavedurl="#">服务二</a></li>
+<li><a href="#" _fcksavedurl="#">服务二</a></li>
+<li><a href="#" _fcksavedurl="#">服务二</a></li>
+<li><a href="#" _fcksavedurl="#">服务二服务二</a></li>
+<li><a href="#" _fcksavedurl="#">服务二服务二服务二</a></li>
+<li><a href="#" _fcksavedurl="#">服务二</a></li>
+</ul>
+</li>
+<li><a href="#" _fcksavedurl="#" class="nav_a">成功案例</a>
+<ul class="sub_nav">
+<li><a href="#" _fcksavedurl="#">案例三</a></li>
+<li><a href="#" _fcksavedurl="#">案例</a></li>
+<li><a href="#" _fcksavedurl="#">案例三案例三</a></li>
+<li><a href="#" _fcksavedurl="#">案例三案例三案例三</a></li>
+</ul>
+</li>
+<li><a href="#" _fcksavedurl="#" class="nav_a">关于我们</a>
+<ul class="sub_nav">
+<li><a href="#" _fcksavedurl="#">我们四</a></li>
+<li><a href="#" _fcksavedurl="#">我们四</a></li>
+<li><a href="#" _fcksavedurl="#">我们四</a></li>
+<li><a href="#" _fcksavedurl="#">我们四111</a></li>
+</ul>
+</li>
+<li><a href="#" _fcksavedurl="#" class="nav_a">在线演示</a>
+<ul class="sub_nav">
+<li><a href="#" _fcksavedurl="#">演示</a></li>
+<li><a href="#" _fcksavedurl="#">演示</a></li>
+<li><a href="#" _fcksavedurl="#">演示</a></li>
+<li><a href="#" _fcksavedurl="#">演示演示演示</a></li>
+<li><a href="#" _fcksavedurl="#">演示演示演示</a></li>
+<li><a href="#" _fcksavedurl="#">演示演示</a></li>
+<li><a href="#" _fcksavedurl="#">演示演示演示</a></li>
+<li><a href="#" _fcksavedurl="#">演示演示演示演示演示</a></li>
+</ul>
+</li>
+<li><a href="#" _fcksavedurl="#" class="nav_a">联系我们</a>
+<ul class="sub_nav">
+<li><a href="#" _fcksavedurl="#">联系联系联系联系联系</a></li>
+<li><a href="#" _fcksavedurl="#">联系联系联系</a></li>
+<li><a href="#" _fcksavedurl="#">联系</a></li>
+<li><a href="#" _fcksavedurl="#">联系联系</a></li>
+<li><a href="#" _fcksavedurl="#">联系联系</a></li>
+<li><a href="#" _fcksavedurl="#">联系联系联系</a></li>
+<li><a href="#" _fcksavedurl="#">联系联系联系</a></li>
+</ul>
+</li>
+</ul>
+</body>
+
+
+</html>
